@@ -1,0 +1,22 @@
+<extend template="base.shtml">
+<head id="head">
+</head>
+<body id="body">
+  <section class="hero is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+      
+        <p class="title" :text="$page.title"></p>
+        <p class="subtitle">TESTING</p>
+        
+
+        <div class="content">
+          <figure class="image is-inline-block">
+            <img style="height: 240px; width: 240px; border-style: solid;" class="is-rounded" src="$site.asset('wallywink_square.gif').link()">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="content" :html="$page.content()"></div>
+</body>

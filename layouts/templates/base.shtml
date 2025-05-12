@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title :text="$site.title"></title>
+    <link type="text/css" rel="stylesheet" href="$site.asset('wally-styles.css').link()">
+    <super>
+  </head>
+  <body id="body">
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="$site.page('').link()">
+          <img src="$site.asset('tabler-w.svg').link()">
+          <h5 class="title is-5" :text="$site.title"></h5>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- <h1 class="site-title" :text="$site.title"></h1> -->
+    <!-- <nav> -->
+      <!-- <a href="$site.page('').link()">Home</a> -->
+       <!-- &nbsp; • &nbsp; -->
+      <!-- <a href="$site.page('about').link()">About</a> -->
+       <!-- &nbsp; • &nbsp; -->
+      <!-- <a href="$site.page('blog').link()">Blog</a> -->
+      <!-- <ctx :if="$site.page('devlog').subpages().first?()"> -->
+         <!-- &nbsp; • &nbsp; -->
+        <!-- <a href="$if.link()">Devlog</a> -->
+      <!-- </ctx> -->
+    <!-- </nav> -->
+    <super>
+  </body>
+</html>
