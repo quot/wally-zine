@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Wally&apos;s World</title>
+    <link type="text/css" rel="stylesheet" href="/wally-styles.css">
+    
+  <style>
+    .date {
+      font-size: 0.9em;
+    }
+    
+    .title h3{
+      margin-top: 0;
+    }
+  </style>
+
+  </head>
+  <body id="body">
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="/tabler-w.svg">
+          <h5 class="title is-5">Wally&apos;s World</h5>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          
+            <a class="navbar-item" href="/blog/second-post/">Articles</a>
+          
+          
+            <a class="navbar-item" href="/wiki/second-post/">Notes</a>
+          
+        </div>
+      </div>
+    </nav>
+
+    <!-- <h1 class="site-title" :text="$site.title"></h1> -->
+    <!-- <nav> -->
+      <!-- <a href="$site.page('').link()">Home</a> -->
+       <!-- &nbsp; • &nbsp; -->
+      <!-- <a href="$site.page('about').link()">About</a> -->
+       <!-- &nbsp; • &nbsp; -->
+      <!-- <a href="$site.page('blog').link()">Blog</a> -->
+      <!-- <ctx :if="$site.page('devlog').subpages().first?()"> -->
+         <!-- &nbsp; • &nbsp; -->
+        <!-- <a href="$if.link()">Devlog</a> -->
+      <!-- </ctx> -->
+    <!-- </nav> -->
+    
+  <h1>Blog</h1>
+  <div><p>This page defines the blog section and lists all posts in it.</p><p>A “site section” in Zine is a group of pages that form a logical subtree of the website. It’s related to directory structure, but it’s not an entirely 1:1 mapping.</p><p>What defines a site section in Zine is the presence of <code>index.smd</code> files. You can learn more <a href="https://zine-ssg.io/docs/" target="_blank">in the official Zine docs</a>.</p><p>Take also a look at <code>layouts/blog.shtml</code> to get an idea of how to render a page list in a SuperHTML template.</p><p>The blog section also has an <a href="/blog/index.xml">RSS feed</a>.</p><p>In Zine, RSS feeds are considered “alternative” versions of an existing page. In concrete defines the blog section and that lists all pages in it, is rendered in two versions: HTML for human readers, and XML for RSS readers.</p><p>This is the SuperMD frontmatter code that defines the RSS feed:</p><pre><code class="ziggy">.<span class="keyword">alternatives</span> = <span class="punctuation_bracket">[</span><span class="punctuation_bracket">{</span> 
+    .<span class="keyword">name</span> = <span class="string">&quot;rss&quot;</span><span class="punctuation_delimiter">,</span>
+    .<span class="keyword">layout</span> = <span class="string">&quot;rss.xml&quot;</span><span class="punctuation_delimiter">,</span> 
+    .<span class="keyword">output</span> = <span class="string">&quot;index.xml&quot;</span><span class="punctuation_delimiter">,</span>
+<span class="punctuation_bracket">}</span><span class="punctuation_bracket">]</span><span class="punctuation_delimiter">,</span>
+</code></pre>
+<p><span class="small ">(btw syntax highlighting is done statically in Zine, no need for javascript libraries, unless you want to)</span></p></div>
+  <div>
+    <h2>Post list</h2>
+    <div>
+      <span class="date">January 02, 1990</span>
+      <a class="title" href="/blog/second-post/">
+        <h3>Second Post</h3>
+      </a>
+    
+      <span class="date">January 01, 1990</span>
+      <a class="title" href="/blog/first-post/">
+        <h3>First Post: What&apos;s A Zine?</h3>
+      </a>
+    </div>
+  </div>
+
+  </body>
+</html>
